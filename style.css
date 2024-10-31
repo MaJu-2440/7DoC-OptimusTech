@@ -42,7 +42,6 @@ a {
 }
 .nav-content {
     padding: 1em;
-    margin-right: 15em;
 
     a {
         margin-right: 3em;
@@ -71,12 +70,31 @@ button {
 .cadastro-button:hover {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+
+.sideMenu {
+    display: none;
+    visibility: hidden;
+}
+.menu.active {
+    right: 0;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, .1);
+    transition: all .5s;
+}
+.menu {
+    display: flex;
+    align-items: center;
+}
+.sideMenu img {
+    position: relative;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
 /*FIM DA HEADER */
 
 /*COMEÇO DO CABEÇALHO (HERO)*/
 .cabeçalho-container {
-    height: 25.5rem;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,6 +103,7 @@ button {
 
     text-align: center;
     font-size: 1rem;
+    padding: 5rem 0;
 }
 .cabeçalho-subtitulo {
     font-weight: 600;
@@ -109,7 +128,7 @@ button {
     display: flex;
     justify-content: center;
     gap: 4rem;
-    padding: 0 2rem 6rem 2rem;
+    padding: 0 4rem 6rem 4rem;
 }
 .metricas-content {
     display: flex;
@@ -137,17 +156,16 @@ button {
 
 /*VAGAS CONTAINER*/
 .vagas-container {
-    height: 112.5rem;
-    padding: 6rem 10rem;
+    padding: 0 10rem 6rem;
 
     font-size: 1.25rem;
 }
 .talentos-container {
     text-align: center;
-
+    
     .cabeçalho-container {
+        margin-top: 0;
         gap: 1.6em;
-        height: 11em;
     }
     .destaque {
         background: rgba(142, 36, 36, .05);
@@ -161,20 +179,23 @@ button {
     }
 
     img {
-        padding-top: 3em;
+        width: 100%;
+        max-width: 80%;
     }
 }
 .vagas-content {
-    height: 47em;
+    width: 70%;
+    margin: 0 auto;
     padding-top: 4em;
 
     display: flex;
     flex-direction: column;
     gap: 3.2em;
+    align-items: center;
 
     .job-container {
-        margin: 0 auto;
-        width: 30em;
+        margin: 0;
+        max-width: 100%;
 
         display: flex;
         flex-direction: column;
@@ -218,6 +239,8 @@ button {
 .depoimento-container {
     padding: 0 4rem 6rem;
     font-size: 1rem;
+    max-width: 80%;
+    margin: 0 auto;
 
     .depoimento-content {
         display: flex;
@@ -235,7 +258,7 @@ button {
         display: flex;
         flex-direction: column;
         gap: 1em;
-        padding: 0 10em;
+        padding: 0 3em;
 
         .subtitulo-depoimento {
             color: var(--main-color);
@@ -282,10 +305,11 @@ button {
     flex-direction: column;
     padding: 6rem;
     align-items: center;
+    text-align: center;
     gap: 2rem;
 
     background-color: rgba(249, 250, 251, 1);
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 .formulario-container h2 {
     font-size: 2.25em;
@@ -321,5 +345,110 @@ footer {
     color: #98a2b3;
     font-weight: 400;
 }
-
 /*FIM FORMULÁRIO E FOOTER*/
+
+/*RESPONSIVIDADE*/
+
+@media screen and (max-width: 920px){
+    html {
+        font-size: 15px;
+    }
+    .vagas-content {
+        width: 80%;
+        .job-container {
+            width: inherit;
+        }
+    }
+}
+@media screen and (max-width: 850px) {
+
+    html {
+        font-size: 18px;
+    }
+
+    .sideMenu {
+        display: initial;
+        visibility: visible;
+    }
+    .nav-content {
+        margin: 2rem 0;
+
+        a {
+            margin-right: 0;
+        }
+    }
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -1000px;
+        height: 100vh;
+        background-color: #f9fafb;
+        width: 15rem;
+        padding: 2rem;
+        transition: all 2s;
+    }
+    .menu .nav-content, .menu .nav-button {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cabeçalho-content {
+        width: 80%;
+    }
+    .metricas-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .metricas-content {
+        align-items: center;
+        text-align: center;
+    }
+    .vagas-container {
+        padding: 0 5rem 6rem;
+    }
+    .depoimento-container {
+        padding: 0 2rem 3rem;
+        .cabeçalho-depoimento .depoimento-quote {
+            font-size: 1.5em;
+        }
+    }
+}
+@media screen and (max-width: 550px) {
+    html {
+        font-size: 15px;
+    }
+    .cabeçalho-container {
+        padding: 5rem 2rem;
+    }
+    .depoimento-container .cabeçalho-depoimento {
+        padding: 0;
+    }
+}
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 14px;
+    }
+    .vagas-container {
+        padding: 0 3rem 6rem;
+
+        .talentos-container img {
+            max-width: 100vw;
+        }
+    }
+    .vagas-content .job-container {
+        max-width: 100%;
+        width: 100%;
+    }
+    .depoimento-container{
+        .depoimento-content {
+            padding: 2em;
+        }
+        .depoimento-content .cabeçalho-depoimento {
+            padding: 0;
+        }
+        
+    } 
+}

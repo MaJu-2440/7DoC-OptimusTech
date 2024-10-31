@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OptimusTech</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <link rel="shortcut icon" href="assets/worldwide 1 (Traced).png">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -17,16 +18,22 @@
                 </a>
             </div>
 
-            <div class="nav-content">
-                <a href="">Home</a>
-                <a href="">Produtos</a>
-                <a href="">Recursos</a>
-                <a href="">Sobre Nós</a>
+            <div class="sideMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="undefined"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
             </div>
 
-            <div class="nav-button">
-                <button class="login-button">Entrar</button>
-                <button class="cadastro-button">Cadastrar</button>
+            <div class="menu">
+                <div class="nav-content">
+                    <a href="index.html">Home</a>
+                    <a href="#">Produtos</a>
+                    <a href="#">Recursos</a>
+                    <a href="#">Sobre Nós</a>
+                </div>
+
+                <div class="nav-button">
+                    <button class="login-button">Entrar</button>
+                    <button class="cadastro-button">Cadastrar</button>
+                </div>
             </div>
         </nav>
     </header>
@@ -154,16 +161,17 @@
 
             <p>Seja o primeiro a saber quando novas vagas serão abertas!</p>
 
-            <div class="formulario-input">
+            <form class="formulario-input">
                 <input type="email" placeholder="Seu e-mail">
 
                 <button>Cadastrar</button>
-            </div>
+            </form>
 
             <footer>
                 &copy 2022 OptimusTech. Todos os direitos reservados 
             </footer>
         </section>
     </main>
+    <script src="index.js"></script>
 </body>
 </html>
