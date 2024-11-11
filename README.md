@@ -6,6 +6,7 @@ Este projeto foi desenvolvido como parte do desafio de 7 dias de código HTML e 
 
 **Sobre o projeto:**
 
+* **Escopo do projeto:** Uma empresa de TI quer desenvolver uma página destinada a novas contratações.
 * **Tecnologias:** HTML5, CSS3.
 * **Conceitos praticados:** Alinhamento, inserção de imagens, separação de blocos e sub-blocos, além de Flexbox, Grid, responsividade e muitos outros.
 
